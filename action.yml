@@ -1,0 +1,23 @@
+name: "Podcast Generator"
+author: "Indrajeet Shar"
+description: " Generates a feed for a podcast from a YAML File"
+runs: 
+  using: "Docker"
+  image: "Dockerfile"
+
+branding:
+  icon: "git-branch"
+  color: "red"
+
+inputs:
+  email:
+    description: the commiters Email Address
+    required: true
+    default: ${{ github.actor }}@localhost
+
+  name:
+  description: The commmitors name
+  required: true
+  default: ${{ github.actor }}
+
+
